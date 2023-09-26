@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px #1e201979;
+    font-size: 16px;
+    background-image: linear-gradient(to right, #EE2E31 25%,  #5BBA6F 100%);
+    user-select: none;
+    overflow: hidden;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #bcc4db80;
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+button:active{
+    transform: scale(1);
+}
+
+button:disabled{
+    /*background-color: #5353532d;*/
+    transform: scale(0.95);
+}
+
+.downButtons{
+    background-color: #fbff00;
+    position: fixed;
+    bottom: 105px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0px;
+}
+
+.backButton{
+    background-color: #bcc4dbbd;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.feedbackButton{
+    background-color: #bcc4db80;
+    padding: 0px 0px;
+    margin-bottom: -10px;
+}
+
+.feedbackButton:hover{
+    transform: scale(1.05);
+}
+
+.normalButton:hover{
+    background-color: #FEE440;
+    transform: scale(1.05);
+}
+
+.backButton:hover{
+    background-color: #EE2E31;
+    transform: scale(1.05);
+}
+
+
+
+.link{
+    color: #00BBF9;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: #006CFA;
+    text-decoration: underline;
+}
+
+h1{
+    margin: 0;
+    position: fixed;
+    top: 2vw;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5vw;
+}
+
+h2{
+    margin: 0;
+    position: fixed;
+    top: 10vw;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5vw;
+}
+
+.swipeArea{
+    /*background-color: #fbff00;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.middleText{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    width: 85%;
+    transition: color 0.5s ease;
+}
+
+.unity-canvas{
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 72vw;
+    height: 40.5vw;
+    background: #231F20;
+}
