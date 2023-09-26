@@ -226,12 +226,26 @@ if (userAgent.match(/Android/i) || userAgent.match(/iPhone|iPad|iPod/i)) {
     swipeArea.addEventListener('touchstart', (e) => {
         StartSwipe = e.changedTouches[0].screenX;
         pressed = true;
+
+        const currentTime = new Date().getTime();
+        const tapInterval = currentTime - lastTapTime;
+        if (tapInterval < 300) {
+            const beruehrungsX = e.touches[0].clientX;
+            const seitenBreite = window.innerWidth;
+    
+            if (beruehrungsX > seitenBreite / 2) {
+                NextQoute();
+            } else {
+                PerviousQuote();
+            }
+        }
+        lastTapTime = currentTime;
     });
 
     swipeArea.addEventListener('touchmove', (e) => {
         if(pressed){
-            const displacementX  = (e.clientX - StartSwipe) - (pullElement.clientWidth / 2);
-            const rotationAngle  = (e.clientX - StartSwipe) / 10;
+            const displacementX  = (e.touches[0].screenX - StartSwipe) - (pullElement.clientWidth / 2);
+            const rotationAngle  = (e.touches[0].screenX - StartSwipe) / 10;
             pullElement.style.transform = `translateX(${displacementX }px) translateY(-50%) rotate(${rotationAngle }deg)`;
 
             const positionRatio = (e.clientX - StartSwipe) / pullElement.clientWidth;
