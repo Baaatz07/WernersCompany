@@ -4,9 +4,11 @@ let quotes = [
     { content: "Das Verdauungssystem Deutschlands", index: 2 },
     { content: "Das Orakel von Delphi ist schneller als die deutsche Post", index: 3 },
     { content: "Latein muss zwischen den Ohren stattfinden", index: 4 },
+    { content: "Luis, bitte", index: 5 },
 ];
 
 let values = [
+    { likes: 0, dislikes: 0, giveFeedback: false},
     { likes: 0, dislikes: 0, giveFeedback: false},
     { likes: 0, dislikes: 0, giveFeedback: false},
     { likes: 0, dislikes: 0, giveFeedback: false},
