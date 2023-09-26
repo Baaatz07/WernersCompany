@@ -4,7 +4,7 @@ let quotes = [
     { content: "Das Verdauungssystem Deutschlands", index: 2 },
     { content: "Das Orakel von Delphi ist schneller als die deutsche Post", index: 3 },
     { content: "Latein muss zwischen den Ohren stattfinden", index: 4 },
-    { content: "Luis, bitte", index: 5 },
+    { content: "Luis bitte", index: 5 }
 ];
 
 let values = [
@@ -64,6 +64,8 @@ function RandomQuote() {
         likeButton.disabled = false;
         dislikeButton.disabled = false;
     }
+    //document.getElementById("randomQuoteButton").style.backgroundColor = '#bcc4db80';
+    //document.getElementById("randomQuoteButton").style.backgroundColor = '#FEE440';
 }
 
 function NextQoute() {
@@ -105,6 +107,8 @@ function NextQoute() {
         likeButton.disabled = false;
         dislikeButton.disabled = false;
     }
+    //document.getElementById("nextQuoteButton").style.backgroundColor = '#bcc4db80';
+    //document.getElementById("nextQuoteButton").style.backgroundColor = '#FEE440';
 }
 
 function PerviousQuote() {
@@ -145,6 +149,8 @@ function PerviousQuote() {
         likeButton.disabled = false;
         dislikeButton.disabled = false;
     }
+    //document.getElementById("previousQuoteButton").style.backgroundColor = '#bcc4db80';
+    //document.getElementById("previousQuoteButton").style.backgroundColor = '#FEE440';
 }
 
 function likeQuote() {
@@ -222,7 +228,6 @@ let StartSwipe;
 let Result;
 let pressed = false;
 const userAgent = navigator.userAgent;
-
 
 
 if (userAgent.match(/Android/i) || userAgent.match(/iPhone|iPad|iPod/i)) {
